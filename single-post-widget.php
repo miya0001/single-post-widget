@@ -122,14 +122,18 @@ class SinglePostWidget extends WP_Widget {
         if ($instance['size']) {
             $class[] = 'size-'.$instance['size'];
         }
-        foreach ($p as $key => $value) {
-            $tpl = str_replace('%'.$key.'%', $value, $tpl);
-        }
         if ($instance['size']) {
             $post_thumb = get_the_post_thumbnail($pid, $instance['size']);
         } else {
             $post_thumb = '';
         }
+        $tpl = str_replace(
+            '%post_date%',
+            mysql2date(get_option("date_format"), $p->post_date, false),
+            $tpl
+        );
+        $tpl = str_replace('%post_title%', esc_html($p->post_title), $tpl);
+        $tpl = str_replace('%post_excerpt%', esc_html($p->post_excerpt), $tpl);
         $tpl = str_replace('%post_thumb%', $post_thumb, $tpl);
         $tpl = str_replace('%post_url%', esc_url(get_permalink($pid)), $tpl);
         $tpl = str_replace('%class%', join(' ', $class), $tpl);
