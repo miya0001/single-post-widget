@@ -2,10 +2,10 @@
 /*
 Plugin Name: Single Post Widget
 Description: Display single post from url on sidebar widget.
-Author: Takayuki Miyauchi (THETA NETWORKS Co,.Ltd)
-Version: 0.1
-Author URI: http://firegoby.theta.ne.jp/
-Plugin URI: http://firegoby.theta.ne.jp/wp/single-post-widget
+Author: Takayuki Miyauchi
+Version: 0.2
+Author URI: http://firegoby.jp/
+Plugin URI: http://firegoby.jp/wp/single-post-widget
 Domain Path: /languages
 Text Domain: single-post-widget
 */
@@ -167,7 +167,7 @@ function __construct()
 
 public function wp_head()
 {
-    $url = WP_PLUGIN_URL.'/'.dirname(plugin_basename(__FILE__)).'/style.css';
+    $url = plugins_url("", __FILE__).'/style.css';
     printf(
         '<link rel="stylesheet" type="text/css" media="all" href="%s" />'."\n",
         apply_filters("single-post-widget-stylesheet", $url)

@@ -1,10 +1,10 @@
 === Single Post Widget ===
 Contributors: miyauchi
-Donate link: http://firegoby.theta.ne.jp/
-Tags: widget 
+Donate link: http://wpist.me/
+Tags: widget
 Requires at least: 3.2
-Tested up to: 3.2
-Stable tag: 0.1.0
+Tested up to: 3.3.1
+Stable tag: 0.2.0
 
 Display single post from url on sidebar widget.
 
@@ -46,13 +46,14 @@ Filter for stylesheet URI.
 
 Please contact to me.
 
+* http://wpist.me/ (en)
+* http://firegoby.jp/ (ja)
 * @miya0001 on twitter.
-* http://www.facebook.com/firegoby
 * https://github.com/miya0001/single-post-widget
 
 = Contributors =
 
-* [Takayuki Miyauchi](http://firegoby.theta.ne.jp/)
+* [Takayuki Miyauchi](http://firegoby.jp/)
 
 == Installation ==
 

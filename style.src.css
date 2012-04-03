@@ -1,0 +1,15 @@
+.single-post-widget .post-thumb a img
+{
+    border: 1px solid #cccccc;
+}
+
+.single-post-widget .post-thumb a:hover img
+{
+    border: 1px solid #666666;
+}
+
+.single-post-widget .post-excerpt
+{
+    font-size: 90%;
+}
+
