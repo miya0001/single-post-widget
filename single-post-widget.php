@@ -3,7 +3,7 @@
 Plugin Name: Single Post Widget
 Description: Display single post from url on sidebar widget.
 Author: Takayuki Miyauchi
-Version: 0.2
+Version: 0.3
 Author URI: http://firegoby.jp/
 Plugin URI: http://firegoby.jp/wp/single-post-widget
 Domain Path: /languages
@@ -150,11 +150,6 @@ class SinglePostWidget extends WP_Widget {
         return apply_filters("single-post-widget-template", $html);
     }
 }
-
-add_action(
-    'widgets_init',
-    create_function('', 'return register_widget("SinglePostWidget");')
-);
 
 class SinglePostWidgetInit {
 
