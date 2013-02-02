@@ -107,7 +107,7 @@ class SinglePostWidget extends WP_Widget {
             $instance['size'] = '';
         }
 
-        $p    = get_post($pid);
+        $p = apply_filters('single_post_widget_post', get_post($pid));
 
         echo $args['before_widget'];
         echo $args['before_title'];
